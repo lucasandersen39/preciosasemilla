@@ -308,6 +308,12 @@ textarea {
     margin: 0;
 }
 
+.mensaje-error {
+    color: red;
+    font-size: 14px;
+    margin: 0;
+}
+
 .oculto {
     display: none;
 }

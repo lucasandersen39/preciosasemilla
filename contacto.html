@@ -24,7 +24,9 @@
           <img src="img/usuario.png" alt="User Icon">
         </div>
 
-        <a href="login.html" class="login-button">Ingresar</a>
+        <a href="login.html" class="login-button" id="link_ingresar">Ingresar</a>
+        <span id="span_nombre_usuario" class="login-button oculto"></span>
+
       </div>
       <nav class="nav">
         <ul>
@@ -43,21 +45,21 @@
     <section class="contact-section" id="contacto">
       <div class="form-container">
         <h2>Contactanos</h2>
-        <form action="#" class="form-login">
+        <form action="#" class="form-login" id="form_contacto">
           <div>
             <label for="name">Nombre</label>
-            <span class="mensaje-error oculto">El campo es obligatorio</span>
+            <span class="mensaje-error oculto" id="error_nombre_contacto">El campo es obligatorio</span>
           </div>
           <input type="text" id="name" placeholder="Escribe tu nombre">
           <div>
             <label for="email">Email <span class="required">*</span></label>
-            <span class="mensaje-error oculto">El campo es obligatorio</span>
+            <span class="mensaje-error oculto" id="error_email_contacto">El campo es obligatorio</span>
           </div>
           <input type="email" id="email" placeholder="Escribe tu email" required>
 
           <div>
             <label for="comment">Escribí aquí tu comentario</label>
-            <span class="mensaje-error oculto">El campo es obligatorio</span>
+            <span class="mensaje-error oculto" id="error_comentario_contacto">El campo es obligatorio</span>
           </div>
           <textarea id="comment" placeholder="Tu comentario"></textarea>
 
@@ -90,6 +92,8 @@
           height="20"> hogar@PreciosaSemiilla.com</a>
     </div>
   </footer>
+  <script src="./js/preciosasemilla.js"></script>
+
 </body>
 
 </html>

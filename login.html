@@ -24,6 +24,8 @@
                 </div>
 
                 <a href="login.html" class="login-button">Ingresar</a>
+                <span id="span_nombre_usuario" class="login-button oculto"></span>
+
             </div>
             <nav class="nav">
                 <ul>
@@ -40,18 +42,24 @@
         <section class="contact-section">
             <div class="form-container">
                 <h2>Inicio de sesión</h5>
-                    <form action="#" class="form-login">
+                    <form action="#" class="form-login" id="form_login">
                         <div>
                             <label for="email">Email</label>
-                            <span class="mensaje-error oculto">El campo es obligatorio</span>
+                            <span class="mensaje-error oculto" id="error_usuario">El campo es obligatorio</span>
                         </div>
                         <input type="email" id="email" name="email">
                         <div>
                             <label for="password">Contraseña</label>
-                            <span class="mensaje-error oculto">El campo es obligatorio</span>
+                            <span class="mensaje-error oculto" id="error_password">El campo es obligatorio</span>
                         </div>
                         <input type="password" id="password" name="password">
+
                         <a href="admin.html" type="submit" class="btn-form">Ingresar</a>
+
+                        <span class="mensaje-error oculto" id="error_acceso_incorrecto">Usuario o contraseña
+                            incorrecto.</span>
+
+                        <button type="submit" class="btn-form">Ingresar</button>
                     </form>
             </div>
         </section>
@@ -73,6 +81,7 @@
                     height="20"> hogar@PreciosaSemiilla.com</a>
         </div>
     </footer>
+    <script src="./js/preciosasemilla.js"></script>
 
 </body>
 
