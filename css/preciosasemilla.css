@@ -1,9 +1,364 @@
+/*Fuentes*/
+@font-face {
+    font-family: 'More sugar';
+    src: url('../fonts/more_sugar_font/MoreSugar-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #a2988b;
+    color: #fff3ec;
+}
+
+h1,
+h2 {
+    font-family: 'Montserrat', cursive;
+    color: #fdfff0;
+    text-align: center;
+}
+
+p,
+a {
+    font-size: 14px;
+}
+
 ul {
     list-style: none;
+}
+
+/* body {
+    font-family: 'More sugar';
+    background-color: #a2988b;
+} */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* General Styles */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10%;
+    background-color: #f5efe4;
+    color: #4d4d4d;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.text-container {
+    margin: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+.text-container h2 {
+    font-size: 2rem;
+    color: #406c7d;
+    margin-bottom: 1rem;
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.text-container h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.buttons button {
+    background-color: #bfcc4d;
+    color: #406c7d;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.buttons button:hover {
+    background-color: #aab739;
+}
+
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(162, 152, 139, 0.8);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff3ec;
+    padding: 5px 10px;
+}
+
+.navbar .active {
+    background-color: #bfcc4d;
+    color: #406c7d;
+    border-radius: 5px;
+}
+
+.navbar .donate,
+.footer .donate,
+.donate {
+    background-color: #ffffff3f;
+    color: #406c7d;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.login {
+    background-color: transparent;
+    border: 1px solid #fff3ec;
+    padding: 5px 10px;
+    color: #fff3ec;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente ambos bloques */
+    justify-content: center;
+    /* Centra horizontalmente ambos bloques */
+    gap: 5%;
+    /* Espacio entre los bloques */
+    padding: 10%;
+    /* Espaciado alrededor de la sección */
+}
+
+.form-container,
+.info-container {
+    width: 45%;
+    /* Ajusta el ancho de cada bloque */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente el contenido */
+    text-align: center;
+    /* Centra el texto */
+}
+
+input,
+textarea {
+    width: 90%;
+    /* Tamaño del campo */
+    margin: 10px 0;
+    /* Espaciado superior e inferior */
+    padding: 10px;
+    /* Espaciado interno */
+    border: 1px solid #ccc;
+    /* Define un borde */
+    border-radius: 5px;
+    /* Borde redondeado */
+    background-color: #fff3ec;
+    /* Color de fondo */
+    color: #4d4d4d;
+    /* Color del texto */
+}
+
+button {
+    background-color: #bfcc4d;
+    color: #406c7d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    /* Agrega espacio superior */
+    align-self: center;
+    /* Centra el botón horizontalmente */
+}
+
+/*HOME*/
+.main-home {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    padding: 20px 0;
+
+}
+
+.card-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f7efe0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card-home h4 {
+    font-family: 'More sugar';
+    font-size: 20px;
+    color: #1e1200;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+}
+
+.card-home img {
+    width: 90%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* FOOTER*/
+button.btn-dona {
+    font-family: 'More sugar';
+    color: #406c7d;
+    padding: 5px 26px;
+    border-radius: 30px;
+    border: none;
+    font-size: 26px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #fdfff0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #887e72;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 16px;
+    font-family: 'Monserat', sans-serif;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-izq {
+    text-align: center;
+}
+
+.footer-der {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 30px;
+    justify-content: center;
+    gap: 10px
+}
+
+.footer-der a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+    color: #ffffff;
+
+}
+
+.footer-der a:hover {
+    color: #f7efe0;
+}
+
+/*ADMIN*/
+button.btn-action-admin {
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #ffc0ad;
+    border: 0;
+}
+
+button.btn-action-admin img {
+    padding: 5px;
+    width: 45px;
+}
+
+.btns-action-admin {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+
+@media screen and (min-width: 480px) {
+    .card-home {
+        flex-direction: row;
+    }
+
+    .card-home img {
+        width: 50%;
+    }
+
+    footer {
+        flex-direction: row;
+        /* justify-content: space-evenly; */
+        padding: 20px 5%;
+    }
+
+    .footer-der {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section.card-home-sola {
+        grid-column: 1 / -1;
+        padding: 20px 40px;
+    }
+
+    section.card-home-sola h4 {
+        font-size: 26px;
+    }
 }
