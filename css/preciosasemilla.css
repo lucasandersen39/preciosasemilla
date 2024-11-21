@@ -172,7 +172,7 @@ main {
 } */
 
 /* Contact Section */
-.contact-section {
+.contact-section, #nosotros, #padrinazgo {
     display: flex;
     align-items: center;
     /* Centra verticalmente ambos bloques */
@@ -552,6 +552,20 @@ nav ul li a:hover {
 
     .footer-der {
         padding: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .card-home {
+        grid-template-columns: 1fr;
     }
 }
 
