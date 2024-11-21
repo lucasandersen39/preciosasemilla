@@ -184,6 +184,17 @@ main {
     /* Espaciado alrededor de la sección */
 }
 
+.form{
+    width: 100%;
+    /* Ajusta el ancho de cada bloque */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente el contenido */
+    text-align: center;
+    /* Centra el texto */
+
+}
 .form-container,
 .info-container {
     width: 45%;
