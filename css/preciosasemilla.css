@@ -382,6 +382,7 @@ button.btn-action-admin img {
     top: 0px;
 }
 
+  
 .header {
     background-color: #625c54;
     border-bottom: 2px solid #ddd;
@@ -398,6 +399,9 @@ button.btn-action-admin img {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    
+
+
 }
 
 /* Header content */
@@ -405,7 +409,6 @@ button.btn-action-admin img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 /* Logo */
@@ -449,7 +452,8 @@ nav ul {
 }
 
 nav ul li {
-    padding: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 
 nav ul li a {
@@ -484,13 +488,12 @@ nav ul li a:hover {
 
 /* User icon */
 .user-icon img {
-    width: 60px;
-    border-radius: 50%;
+    width:60px; 
+    border-radius: 50%; 
     position: absolute;
     bottom: 10px;
     right: 2.5cm;
-    transition: all 0.9s ease;
-    /* Aseguro que la transición se mantenga también aquí */
+    transition: all 0.9s ease; /* Aseguro que la transición se mantenga también aquí */
 }
 
 /* Login button */
@@ -583,15 +586,161 @@ nav ul li a:hover {
         position: absolute;
         bottom: 10px;
         right: 10px;
-        transition: all 0.9s ease;
-        /* Aseguro que la transición se mantenga también aquí */
+       transition: all 0.9s ease; /* Aseguro que la transición se mantenga también aquí */
     }
+   
+}
 
+@media (max-width: 1030px) {
     .user-icon {
         position: absolute;
         bottom: 5px;
-        right: 10px;
-        transition: all 0.9s ease;
-        /* Aseguro que la transición se mantenga también aquí */
+        right: 10px; 
+       transition: all 0.9s ease; /* Aseguro que la transición se mantenga también aquí */
     }
+   
+}
+
+.login-button:hover {
+    background-color: #bfcc4d;
+}
+
+
+/* agregado vani ultimo*/
+
+/* Estilo del menú hamburguesa */
+.hamburger {
+    display: none; /* Ocultar inicialmente */
+    width: 40px; /* Ancho del ícono */
+    height: 40px; /* Alto del ícono */
+    cursor: pointer;
+    position: absolute; /* Permite posicionarlo donde desees */
+    top: 80%; /* Ajustar el ícono en relación al top */
+    left:5%
+
+}
+
+.responsive-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 60px; /* Ajusta según la posición de tu header o menú */
+    left: 0;
+    width: 100%;
+    background-color: #a2988b;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.responsive-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.responsive-menu ul li {
+    margin: 10px 0;
+}
+
+.responsive-menu ul li a {
+    text-decoration: none;
+    color: #1e1200;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.responsive-menu ul li a:hover {
+    color: #bfcc4d;
+}
+
+/* Para mostrar el menú cuando se activa */
+.responsive-menu.show {
+    display: block;
+    
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 780px) {
+    nav ul {
+    display: none; /* Ocultar el menú normal */
+ 
+    }
+
+    .hamburger {
+        display: flex; /* Mostrar el menú hamburguesa */
+    }
+
+}
+
+.dona-container {
+    display: flex;
+    height: 100vh; 
+    margin-right: 5%;
+    margin-left: 5%;
+   
+}
+
+/* Estilo para los dos divs */
+.botones-container, .texto-dona-container{
+    padding: 8%;
+    width: 45%;
+    flex-direction: column;
+    text-align: center;
+ 
+   
+}
+
+
+.texto-dona-container{
+
+    color:white;
+    font-family: 'More sugar';
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2; /* Ajusta el interlineado (espacio entre líneas) */
+    letter-spacing: 2px; /* Ajusta el interletrado (espacio entre letras) */
+
+}
+
+.donation-buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center; 
+    padding: 20px;
+    
+}
+
+.donation-button {
+    width: 110%; 
+    height: 1.7cm; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(83, 78, 78);
+    background-color: #f7efe0; 
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.donation-button:hover {
+    background-color: #bfcc4d;
+    
+}
+
+.button-icon {
+    width: 170px; 
+    
+}
+
+main{
+    background-color:#a2988b;
 }
