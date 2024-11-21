@@ -24,12 +24,12 @@
           <img src="img/usuario.png" alt="User Icon">
         </div>
 
-        <button class="login-button">Ingresar</button>
+        <a href="login.html" class="login-button">Ingresar</a>
       </div>
       <nav class="nav">
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="contacto.html">CONTACTO</a></li>
+          <li class="li-active"><a href="contacto.html">CONTACTO</a></li>
           <li><a href="nosotros.html">NOSOTROS</a></li>
           <li><a href="padrinaje.html">PADRINAJE</a></li>
           <li><a href="dona.html" class="dona">DONÁ</a></li>
@@ -43,14 +43,22 @@
     <section class="contact-section" id="contacto">
       <div class="form-container">
         <h2>Contactanos</h2>
-        <form action="#">
-          <label for="name">Nombre</label>
+        <form action="#" class="form-login">
+          <div>
+            <label for="name">Nombre</label>
+            <span class="mensaje-error oculto">El campo es obligatorio</span>
+          </div>
           <input type="text" id="name" placeholder="Escribe tu nombre">
-
-          <label for="email">Email <span class="required">*</span></label>
+          <div>
+            <label for="email">Email <span class="required">*</span></label>
+            <span class="mensaje-error oculto">El campo es obligatorio</span>
+          </div>
           <input type="email" id="email" placeholder="Escribe tu email" required>
 
-          <label for="comment">Escribí aquí tu comentario</label>
+          <div>
+            <label for="comment">Escribí aquí tu comentario</label>
+            <span class="mensaje-error oculto">El campo es obligatorio</span>
+          </div>
           <textarea id="comment" placeholder="Tu comentario"></textarea>
 
           <button type="submit" class="btn-form">Enviar</button>

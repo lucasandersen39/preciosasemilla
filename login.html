@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=More+Sugar&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/preciosasemilla.css">
     <title>Login</title>
 </head>
@@ -21,7 +23,7 @@
                     <img src="img/usuario.png" alt="User Icon">
                 </div>
 
-                <button class="login-button">Ingresar</button>
+                <a href="login.html" class="login-button">Ingresar</a>
             </div>
             <nav class="nav">
                 <ul>
@@ -34,22 +36,24 @@
             </nav>
         </div>
     </header>
-    <main class="main-home">
-        <section>
-            <form action="#">
-                <h5>Inicio de sesión</h5>
-                <div>
-                    <label for="email">Email</label>
-                    <span class="mensaje-error oculto">El campo es obligatorio</span>
-                </div>
-                <input type="email" id="email" name="email">
-                <div>
-                    <label for="password">Contraseña</label>
-                    <span class="mensaje-error oculto">El campo es obligatorio</span>
-                </div>
-                <input type="password" id="password" name="password">
-                <button type="submit" class="btn-form">Ingresar</button>
-            </form>
+    <main>
+        <section class="contact-section">
+            <div class="form-container">
+                <h2>Inicio de sesión</h5>
+                    <form action="#" class="form-login">
+                        <div>
+                            <label for="email">Email</label>
+                            <span class="mensaje-error oculto">El campo es obligatorio</span>
+                        </div>
+                        <input type="email" id="email" name="email">
+                        <div>
+                            <label for="password">Contraseña</label>
+                            <span class="mensaje-error oculto">El campo es obligatorio</span>
+                        </div>
+                        <input type="password" id="password" name="password">
+                        <button type="submit" class="btn-form">Ingresar</button>
+                    </form>
+            </div>
         </section>
     </main>
     <footer>
