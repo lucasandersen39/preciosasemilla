@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preciosa Semilla</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=More+Sugar&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=More+Sugar&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/preciosasemilla.css">
 </head>
+
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="logo-container">
-      <img src="img/PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla" class="logo">
-      <h1 class="site-title">PRECIOSA SEMILLA</h1>
+  <header>
+    <div class="header">
+      <div class="tope"></div>
+      <div class="header-content">
+        <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
+      </div>
+      <h1>PRECIOSA SEMILLA</h1>
+      <div class="user-section">
+        <div class="user-icon">
+          <img src="img/usuario.png" alt="User Icon">
+        </div>
+
+        <button class="login-button">Ingresar</button>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="padrinaje.html">PADRINAJE</a></li>
+          <li><a href="dona.html" class="dona">DONÁ</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar">
-      <a href="index.html">HOME</a>
-      <a href="contacto.html" class="active">CONTACTO</a>
-      <a href="nosotros.html">NOSOTROS</a>
-      <a href="padrinaje.html">PADRINAJE</a>
-      <a href="dona.html" class="donate">DONÁ</a>
-    </nav>
-    <a href="login.html" class="login">Ingresar</a>
   </header>
 
   <!-- Main content -->
@@ -32,29 +46,42 @@
         <form action="#">
           <label for="name">Nombre</label>
           <input type="text" id="name" placeholder="Escribe tu nombre">
-          
+
           <label for="email">Email <span class="required">*</span></label>
           <input type="email" id="email" placeholder="Escribe tu email" required>
-          
+
           <label for="comment">Escribí aquí tu comentario</label>
           <textarea id="comment" placeholder="Tu comentario"></textarea>
-          
-          <button type="submit">Enviar</button>
+
+          <button type="submit" class="btn-form">Enviar</button>
         </form>
       </div>
       <div class="info-container">
         <h2>Deducí tu donación del Impuesto a las ganancias.</h2>
-        <p>La ley del Impuesto a las Ganancias prevé que los donantes puedan deducir del pago del impuesto, un porcentaje de acuerdo a los límites establecidos por ley.</p>
+        <p>La ley del Impuesto a las Ganancias prevé que los donantes puedan deducir del pago del impuesto, un
+          porcentaje de acuerdo a los límites establecidos por ley.</p>
         <p>Dejanos tu mail y te contamos cómo.</p>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <a href="dona.html" class="donate">DONÁ</a>
-    <p>Necochea, Pcia. Buenos Aires, Argentina</p>
-   
+  <footer>
+    <div class="footer-izq">
+      <button class="btn-dona">DONÁ</button>
+      <p>Necochea, Pcia. Buenos Aires</p>
+      <p>Argentina</p>
+    </div>
+    <div class="footer-der">
+      <a href="https://wa.me/22621552639" target="_blank"><img src="./img/llamada.png" alt="whatsapp" width="20"
+          height="20"> 2262-1552639</a>
+      <a href="https://www.facebook.com/preciosasemilla" target="_blank"><img src="./img/facebook.png" alt="facebook"
+          width="20" height="20"> HogarPreciosa</a>
+      <a href="https://www.instagram.com/preciosasemilla/" target="_blank"><img src="./img/instagram.png"
+          alt="instagram" width="20" height="20">@PreciosaSemilla</a>
+      <a href="mailto:hogar@PreciosaSemiilla.com"><img src="./img/correo-electronico.png" alt="mail" width="20"
+          height="20"> hogar@PreciosaSemiilla.com</a>
+    </div>
   </footer>
 </body>
+
 </html>

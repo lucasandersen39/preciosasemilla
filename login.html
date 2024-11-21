@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/preciosasemilla.css">
-    <title>Preciosa semilla</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -34,20 +34,22 @@
             </nav>
         </div>
     </header>
-
     <main class="main-home">
-        <section class="card-home">
-            <img src="./img/ayudanos-a-contruir-nuestro-hogar.png" alt="Ayudanos a construir nuestro hogar">
-            <h4>Conocé los avances en la construccion del nuevo hogar Preciosa Semilla.</h4>
-        </section>
-        <section class="card-home">
-            <img src="./img/Somos-hogar-preciosa-semilla.png" alt="Somos hogar Preciosa Semilla">
-            <h4>Te contamos un poco sobre el trabajo social del Hogar.</h4>
-        </section>
-        <section class="card-home card-home-sola">
-            <img src="./img/salud-educacion-preciosa-semilla.png"
-                alt="Salud, educación, terapia, deporte, salidas recreativas">
-            <h4 class="h4-te-contamos">Te contamos por qué necesitamos tu ayuda.</h4>
+        <section>
+            <form action="#">
+                <h5>Inicio de sesión</h5>
+                <div>
+                    <label for="email">Email</label>
+                    <span class="mensaje-error oculto">El campo es obligatorio</span>
+                </div>
+                <input type="email" id="email" name="email">
+                <div>
+                    <label for="password">Contraseña</label>
+                    <span class="mensaje-error oculto">El campo es obligatorio</span>
+                </div>
+                <input type="password" id="password" name="password">
+                <button type="submit" class="btn-form">Ingresar</button>
+            </form>
         </section>
     </main>
     <footer>
