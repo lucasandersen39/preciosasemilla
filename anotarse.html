@@ -16,7 +16,7 @@
     </div>
     <nav class="navbar">
       <a href="index.html">HOME</a>
-      <a href="contacto.html" >CONTACTO</a>
+      <a href="contacto.html">CONTACTO</a>
       <a href="nosotros.html">NOSOTROS</a>
       <a href="padrinaje.html" class="active">PADRINAJE</a>
       <a href="dona.html" class="donate">DONÁ</a>
@@ -26,24 +26,25 @@
 
   <!-- Main content -->
   <main>
-    <section class="padrinazgo" id="padrinazgo">
-      <div class="image-container">
-        <img src="ruta-de-tu-imagen-2.png" alt="Padrinazgo">
-      </div>
-      <div class="text-container">
-        <h2>Padrinazgo</h2>
-        <p>
-          Al cuidar y proteger a un niño, estamos cuidando y protegiendo el futuro. Aquí podrás conocer todas las maneras en las que puedes ayudar a los chicos del hogar.
-        </p>
-        <h3>Colaborá con el hogar mensualmente:</h3>
-        <div class="buttons">
-          <a href="anotarse.html">¡Anotate para ser Madrina/Padrino!</a>
-          <a href="dona.html">O colaborá por única vez.</a>
-        </div>
+    <section class="anotarse" id="anotarse">
+      <div class="form">
+        <h2>Anotate para apadrinar</h2>
+        <form action="#">
+          <label for="name">Nombre completo<span class="required">*</span></label><br>
+          <input type="text" id="name" placeholder="Escribe tu nombre" required><br>
+          
+          <label for="email">Email<span class="required">*</span></label><br>
+          <input type="email" id="email" placeholder="Escribe tu email" required><br>
+          
+          <label for="phone">Teléfono de contacto</label><br>
+          <input type="number" id="phone" placeholder="Teléfono" ></textarea><br>
+          
+          <button type="submit">Enviar</button>
+        </form>
       </div>
     </section>
   </main>
-  
+
   <!-- Footer -->
   <footer class="footer">
     <a href="dona.html" class="donate">DONÁ</a>
