@@ -13,32 +13,34 @@
 <body>
     <header>
         <div class="header">
-            <div class="tope"></div>
-            <div class="header-content">
-                <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
-            </div>
-            <h1>PRECIOSA SEMILLA</h1>
-            <div class="user-section">
-                <div class="user-icon">
-                    <img src="img/usuario.png" alt="User Icon">
+            <div class="top-header">
+                <div class="header-content">
+                    <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
                 </div>
+                <div class="user-section">
+                    <div class="user-icon oculto">
+                        <img src="img/usuario.png" alt="User Icon">
+                    </div>
 
-                <a href="login.html" class="login-button" id="link_ingresar">Ingresar</a>
-                <a href="login.html" class="login-button oculto">Salir</a>
-                <span id="span_nombre_usuario" class="login-button oculto"></span>
-
+                    <a href="login.html" class="login-button" id="link_ingresar">Ingresar</a>
+                    <span id="span_nombre_usuario" class="login-button oculto"></span>
+                </div>
+            </div>
+            <div class="title-header">
+                <h1>PRECIOSA SEMILLA</h1>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li class="li-active"><a href="index.html">HOME</a></li>
                     <li><a href="contacto.html">CONTACTO</a></li>
                     <li><a href="nosotros.html">NOSOTROS</a></li>
                     <li><a href="padrinaje.html">PADRINAJE</a></li>
-                    <li><a href="dona.html" class="dona">DONÁ</a></li>
+                    <li><a href="dona.html" class="btn-dona dona">DONÁ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main class="main-home">
         <section class="card-home">
             <img src="./img/ayudanos-a-contruir-nuestro-hogar.png" alt="Ayudanos a construir nuestro hogar">
@@ -69,7 +71,8 @@
     <footer>
         <div class="container-footer">
             <div class="footer-izq">
-                <button class="btn-dona">DONÁ</button>
+                <a href="dona.html" class="btn-dona">DONÁ</a>
+
                 <p>Necochea, Pcia. Buenos Aires</p>
                 <p>Argentina</p>
             </div>

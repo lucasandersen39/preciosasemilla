@@ -328,7 +328,7 @@ textarea {
 }
 
 /* FOOTER*/
-button.btn-dona {
+.btn-dona {
     font-family: 'More sugar';
     color: #406c7d;
     padding: 5px 26px;
@@ -338,6 +338,12 @@ button.btn-dona {
     margin: 10px;
     cursor: pointer;
     background-color: #fdfff0;
+    transform: scale(1);
+    transition: all 1s ease-out;
+}
+
+.btn-dona:hover {
+    transform: scale(1.2);
 }
 
 footer {
@@ -362,6 +368,8 @@ footer {
 
 .footer-izq {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-der {
@@ -417,23 +425,44 @@ button.btn-action-admin img {
     top: 0px;
 }
 
+header {
+    height: 20vh;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 95%;
+    height: 50px;
+}
+
+.title-header {
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
 
 .header {
     background-color: #625c54;
-    border-bottom: 2px solid #ddd;
-    padding: 10px 0;
+    /* border-bottom: 2px solid #ddd; */
+    /* padding: 10px 0; */
     width: 100%;
-    height: 5cm;
+    height: 100%;
     /* Ajustar altura con porcentaje */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     background-image: url('../img/FONDO-LOGO.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    /* position: relative; */
 
 
 
@@ -441,29 +470,34 @@ button.btn-action-admin img {
 
 /* Header content */
 .header-content {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 /* Logo */
 .logo {
-    margin-left: 5cm;
-    width: 9%;
+    /* margin-left: 5cm;
+    width: 9%; */
     /* Logo ajustado a un porcentaje del contenedor */
-    height: auto;
+    /* height: auto;
     margin-top: 20px;
     position: absolute;
     bottom: 10px;
     left: 3%;
-    transition: all 0.9s ease;
+    transition: all 0.9s ease; */
     /* Transición suave para todas las propiedades */
 
+    width: 14%;
+    position: absolute;
+    bottom: 50%;
+    left: 3%;
+    transition: all 0.9s ease;
+    transform: translateY(50%);
 }
 
 /*title*/
 h1 {
-
     text-align: center;
     font-size: 3vw;
     /* Ajuste en función del ancho de la pantalla */
@@ -475,43 +509,66 @@ h1 {
 
 /* Navigation menu */
 nav ul {
-    background-color: rgb(220, 216, 212);
-    height: 20%;
+    /* background-color: #1e1200;
+    height: 50px;
+    padding: 0 20px; */
     /* Ajusta la altura del menú de navegación */
-    border-radius: 20px;
+    /* border-radius: 20px;
     list-style: none;
     display: flex;
     position: absolute;
-    bottom: 3%;
-    right: 25%;
+    bottom: 0;
+    right: 15%;
+    gap: 2%; */
+    background-color: #1e1200;
+    height: 60px;
+    padding: 0 30px;
+    border-radius: 20px;
+    list-style: none;
+    display: flex;
+    /* position: absolute; */
+    /* bottom: 0;
+    right: 15%; */
+    gap: 2%;
+    justify-content: center;
 }
 
 nav ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
     margin: 5px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    margin: 0 auto;
+    border-bottom: 2px solid #bfcc4d;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 80%;
 }
 
 nav ul li a {
     text-align: center;
     text-decoration: none;
-    color: #1e1200;
+    color: #fff3ec;
     font-weight: bold;
     padding: 5px 10px 5px 10px;
-
-}
-
-nav ul li a:hover {
-    background-color: #bfcc4d;
-    color: #1e1200;
-    border-radius: 20px;
+    font-size: 18px;
 }
 
 .dona {
-    color: #406c7d;
-    font-family: fantasy;
-    letter-spacing: 3px;
     /* Aumenta el espacio entre letras */
-    text-align: center
+    text-align: center;
+    font-size: 18px;
 }
 
 /* User section */
@@ -519,15 +576,18 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    /* position: absolute;
+    right: 10px;
+    bottom: 5px; */
 }
 
 /* User icon */
 .user-icon img {
     width: 60px;
     border-radius: 50%;
-    position: absolute;
+    /* position: absolute;
     bottom: 10px;
-    right: 2.5cm;
+    right: 2.5cm; */
     transition: all 0.9s ease;
     /* Aseguro que la transición se mantenga también aquí */
 }
@@ -542,9 +602,9 @@ nav ul li a:hover {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
-    position: absolute;
+    /* position: absolute;
     bottom: 10px;
-    right: 4cm;
+    right: 4cm; */
     transition: all 0.9s ease;
     /* Aseguro que la transición se mantenga también aquí */
 }
@@ -553,10 +613,12 @@ nav ul li a:hover {
     background-color: #bfcc4d;
 }
 
-.li-active {
-    background-color: #bfcc4d;
-    color: #1e1200;
-    border-radius: 20px;
+.li-active a::after {
+    content: "";
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #bfcc4d;
 }
 
 /* FIN VANI*/
@@ -585,10 +647,10 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .header {
+    /* .header {
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
     .nav ul {
         flex-direction: column;
@@ -612,38 +674,42 @@ nav ul li a:hover {
     section.card-home-sola h4 {
         font-size: 26px;
     }
-}
 
-
-@media (max-width: 980px) {
-    .logo {
-        width: 9%;
-        /* Reduzco el tamaño del logo */
-        margin-left: 4%;
-        margin-bottom: 10%;
-        transition: all 0.9s ease;
-        /* Aseguro que la transición se mantenga también aquí */
+    header {
+        height: 40vh;
     }
 }
 
-@media (max-width: 1270px) {
+
+/* @media (max-width: 980px) {
     .logo {
         width: 9%;
+        margin-left: 4%;
+        margin-bottom: 10%;
+        transition: all 0.9s ease;
+    }
+} */
+
+@media (max-width: 1270px) {
+    .logo {
+        /* width: 9%; */
         /* Reduzco el tamaño del logo */
-        margin-left: 5%;
+        /* margin-left: 5%; */
         transition: all 0.9s ease;
         /* Aseguro que la transición se mantenga también aquí */
+        top: 0;
+        bottom: 100%;
+        transform: translateY(10px);
     }
 }
 
 @media (max-width: 1030px) {
-    .login-button {
+    /* .login-button {
         position: absolute;
         bottom: 10px;
         right: 10px;
         transition: all 0.9s ease;
-        /* Aseguro que la transición se mantenga también aquí */
-    }
+    } */
 
 }
 
