@@ -15,6 +15,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #a2988b;
     color: #fff3ec;
+    text-align: start;
+    font-size: 16px;
+    line-height: 1.2;
 }
 
 h1,
@@ -22,10 +25,11 @@ h2 {
     font-family: 'Montserrat', cursive;
     color: #fdfff0;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 h2 {
-    font-family: 'More sugar';
+    font-size: 2rem;
 
 }
 
@@ -69,14 +73,14 @@ main {
 .text-container {
     margin: 5%;
     width: 90%;
-    text-align: center;
+    /* text-align: center; */
 }
 
-.text-container h2 {
+/* .text-container h2 {
     font-size: 2rem;
     color: #406c7d;
     margin-bottom: 1rem;
-}
+} */
 
 .text-container p {
     font-size: 1rem;
@@ -201,11 +205,12 @@ main {
 .info-container {
     width: 45%;
     /* Ajusta el ancho de cada bloque */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: 20px; */
     /* Centra horizontalmente el contenido */
-    text-align: center;
+    /* text-align: center; */
     /* Centra el texto */
 }
 
@@ -280,12 +285,9 @@ textarea {
 }
 
 .card-home h4 {
-    font-family: 'More sugar';
-    font-size: 20px;
-    color: #1e1200;
-    text-align: center;
-    max-width: 300px;
+    font-size: 2rem;
     margin: auto;
+    padding: 0 20px;
 }
 
 .card-home img {
@@ -340,7 +342,7 @@ textarea {
     flex-direction: column;
     max-width: 400px;
     margin: auto;
-    padding: 30px;
+    padding: 0 30px;
     width: 100%;
 }
 
@@ -352,7 +354,7 @@ textarea {
 }
 
 .form-login h5 {
-    font-family: 'More sugar';
+    /* font-family: 'More sugar'; */
     font-size: 26px;
     color: #fff3ec;
     text-align: center;
@@ -514,11 +516,11 @@ header {
 }
 
 /* Header content */
-.header-content {
-    /* display: flex;
+/* .header-content {
+    display: flex;
     align-items: center;
-    justify-content: space-between; */
-}
+    justify-content: space-between;
+} */
 
 /* Logo */
 .logo {
@@ -640,7 +642,7 @@ nav ul li a {
 /* Login button */
 .login-button {
     padding: 10px 20px;
-    background-color: #a2988b;
+    background-color: #fdfff0;
     color: #1e1200;
     border: none;
     border-radius: 30px;
@@ -908,11 +910,20 @@ nav ul li a {
     font-size: 1em;
     font-weight: bold;
     color: rgb(83, 78, 78);
-    background-color: #f7efe0;
-    border: none;
-    border-radius: 20px;
+    /* background-color: #f7efe0; */
+    /* border: none; */
+    /* border-radius: 20px; */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.first-donation-button::after {
+    content: "";
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #FFFFFF;
 }
 
 .donation-button:hover {
