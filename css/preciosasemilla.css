@@ -918,13 +918,22 @@ nav ul li a {
     position: relative;
 }
 
-.first-donation-button::after {
+.first-donation-button::after{
     content: "";
     display: block;
     width: 90%;
     margin: 0 auto;
     border-bottom: 1px solid #FFFFFF;
 }
+
+.second-donation-button::before {
+    content: "";
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #FFFFFF;
+}
+
 
 .donation-button:hover {
     background-color: #bfcc4d;
