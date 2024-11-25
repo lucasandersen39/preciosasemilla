@@ -37,6 +37,7 @@ p,
 a {
     font-size: 14px;
     text-decoration: none;
+    color: #fff3ec;
 }
 
 ul {
@@ -113,66 +114,6 @@ main {
     background-color: #aab739;
 }
 
-
-/* Header */
-/* .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(162, 152, 139, 0.8);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.site-title {
-    font-size: 24px;
-}
-
-.navbar {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #fff3ec;
-    padding: 5px 10px;
-}
-
-.navbar .active {
-    background-color: #bfcc4d;
-    color: #406c7d;
-    border-radius: 5px;
-}
-
-.navbar .donate,
-.footer .donate,
-.donate {
-    background-color: #ffffff3f;
-    color: #406c7d;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-.login {
-    background-color: transparent;
-    border: 1px solid #fff3ec;
-    padding: 5px 10px;
-    color: #fff3ec;
-    border-radius: 5px;
-} */
 
 /* Contact Section */
 .contact-section,
@@ -367,9 +308,7 @@ textarea {
     margin: 0;
 }
 
-.oculto {
-    display: none;
-}
+
 
 /* FOOTER*/
 .btn-dona {
@@ -555,7 +494,7 @@ h1 {
 }
 
 /* Navigation menu */
-nav ul {
+.nav ul {
     /* background-color: #1e1200;
     height: 50px;
     padding: 0 20px; */
@@ -580,7 +519,7 @@ nav ul {
     justify-content: center;
 }
 
-nav ul li {
+.nav ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -590,7 +529,7 @@ nav ul li {
     position: relative;
 }
 
-nav ul li a::after {
+.nav ul li a::after {
     content: "";
     display: block;
     width: 0%;
@@ -599,11 +538,11 @@ nav ul li a::after {
     transition: width 0.3s ease;
 }
 
-nav ul li a:hover::after {
+.nav ul li a:hover::after {
     width: 80%;
 }
 
-nav ul li a {
+.nav ul li a {
     text-align: center;
     text-decoration: none;
     color: #fff3ec;
@@ -628,6 +567,26 @@ nav ul li a {
     bottom: 5px; */
 }
 
+.user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-user {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #a2988b;
+    padding: 10px;
+    z-index: 1;
+    width: 200px;
+    color: #fff3ec;
+    text-align: center;
+}
+
 /* User icon */
 .user-icon img {
     width: 60px;
@@ -637,6 +596,11 @@ nav ul li a {
     right: 2.5cm; */
     transition: all 0.9s ease;
     /* Aseguro que la transición se mantenga también aquí */
+}
+
+.span-usuario {
+    color: #000000;
+    font-weight: 600;
 }
 
 /* Login button */
@@ -765,16 +729,16 @@ nav ul li a {
 
 }
 
+/* 
 @media (max-width: 1030px) {
     .user-icon {
         position: absolute;
         bottom: 5px;
         right: 10px;
         transition: all 0.9s ease;
-        /* Aseguro que la transición se mantenga también aquí */
     }
 
-}
+} */
 
 .login-button:hover {
     background-color: #bfcc4d;
@@ -782,6 +746,11 @@ nav ul li a {
 
 
 /* agregado vani ultimo*/
+.container-menu-responsive {
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+}
 
 /* Estilo del menú hamburguesa */
 .hamburger {
@@ -792,24 +761,27 @@ nav ul li a {
     height: 40px;
     /* Alto del ícono */
     cursor: pointer;
-    position: absolute;
+    /* position: absolute; */
     /* Permite posicionarlo donde desees */
-    top: 80%;
+    /* top: 80%; */
     /* Ajustar el ícono en relación al top */
-    left: 5%
+    /* left: 5% */
 }
 
 .responsive-menu {
     display: none;
     /* Oculto por defecto */
     position: absolute;
-    top: 60px;
+    top: 40px;
     /* Ajusta según la posición de tu header o menú */
     left: 0;
     width: 100%;
     background-color: #a2988b;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    height: fit-content;
+    text-align: left;
 }
 
 .responsive-menu ul {
@@ -843,7 +815,7 @@ nav ul li a {
 
 /* Media query para dispositivos pequeños */
 @media (max-width: 780px) {
-    nav ul {
+    .nav ul {
         display: none;
         /* Ocultar el menú normal */
 
@@ -918,7 +890,7 @@ nav ul li a {
     position: relative;
 }
 
-.first-donation-button::after{
+.first-donation-button::after {
     content: "";
     display: block;
     width: 90%;
@@ -947,4 +919,8 @@ nav ul li a {
 
 main {
     background-color: #a2988b;
+}
+
+.oculto {
+    display: none;
 }

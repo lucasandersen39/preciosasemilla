@@ -8,9 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
         spanUsuario.textContent = usuario;
         spanUsuario.classList.remove('oculto');
         document.querySelector('#link_ingresar').classList.add('oculto');
+        const btnsAdmin = document.querySelectorAll('.btns-action-admin');
+        btnsAdmin.forEach(btn => {
+            btn.classList.remove('oculto');
+        });
+    } else {
+        document.querySelector('#section-user').classList.add('oculto');
+    }
+    //Acciones al hacer click en la imagen del usuario
+    const btnUsuario = document.querySelector('#section-user');
+    if (btnUsuario && usuario) {
+        btnUsuario.addEventListener('click', function () {
+            const menuUser = btnUsuario.querySelector('.menu-user');
+            menuUser.classList.toggle('oculto');
+        });
     }
     const formLogin = document.querySelector('#form_login');
-
     if (formLogin)
         formLogin.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -30,9 +43,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (email != 'admin@admin.com' || password != 'Admin') {
                 spanAcceso.classList.remove('oculto');
+
             } else {
                 localStorage.setItem('usuario', 'Administrador');
-                location.href = 'admin.html';
+                const btnsAdmin = document.querySelectorAll('.btns-action-admin');
+                btnsAdmin.forEach(btn => {
+                    btn.classList.remove('oculto');
+                });
+                location.href = 'index.html';
                 //Guardar el nombre de usuario en el local storage
             }
         });
@@ -59,5 +77,12 @@ document.addEventListener('DOMContentLoaded', function () {
             if (mensaje == '') {
                 spanComentario.classList.remove('oculto');
             }
+        });
+
+    const cerrar_sesion = document.querySelector('#cerrar_sesion_user');
+    if (cerrar_sesion)
+        cerrar_sesion.addEventListener('click', function () {
+            localStorage.removeItem('usuario');
+            document.querySelector('#section-user').classList.add('oculto');
         });
 });

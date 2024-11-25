@@ -2,7 +2,7 @@
 
 function toggleMenu() {
     const menu = document.querySelector('.responsive-menu');
-    menu.classList.toggle('.show'); 
-    
+    menu.classList.toggle('show');
+
 }
 
