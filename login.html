@@ -18,12 +18,16 @@
                     <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
                 </div>
                 <div class="user-section">
-                    <div class="user-icon oculto">
+                    <a href="login.html" class="login-button" id="link_ingresar">Iniciar sesión</a>
+                    <span id="span_nombre_usuario" class="span-usuario oculto"></span>
+                    <div class="user-icon" id="section-user">
                         <img src="img/usuario.png" alt="User Icon">
+                        <div class="menu-user oculto">
+                            <ul>
+                                <li><a href="index.html">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <a href="login.html" class="login-button" id="link_ingresar">Ingresar</a>
-                    <span id="span_nombre_usuario" class="login-button oculto"></span>
                 </div>
             </div>
             <div class="title-header">
@@ -38,6 +42,25 @@
                     <li><a href="dona.html" class="btn-dona dona">DONÁ</a></li>
                 </ul>
             </nav>
+            <!-- Menu responsive -->
+            <div class="container-menu-responsive">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <img src="img/menu-hamburguesa.png" alt="User Icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="responsive-menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                        <li><a href="nosotros.html">NOSOTROS</a></li>
+                        <li><a href="padrinaje.html">PADRINAJE</a></li>
+                        <li><a href="dona.html">DONÁ</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -88,6 +111,7 @@
 
     </footer>
     <script src="./js/preciosasemilla.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
