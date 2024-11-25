@@ -325,6 +325,9 @@ textarea {
     transition: all 1s ease-out;
     max-width: 170px;
 }
+.nav ul li a.btn-dona {
+    color: #406c7d; /* Azul */
+}
 
 .btn-dona:hover {
     transform: scale(1.2);
