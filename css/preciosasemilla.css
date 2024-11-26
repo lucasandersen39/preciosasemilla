@@ -498,28 +498,16 @@ h1 {
 
 /* Navigation menu */
 .nav ul {
-    /* background-color: #1e1200;
-    height: 50px;
-    padding: 0 20px; */
-    /* Ajusta la altura del menú de navegación */
-    /* border-radius: 20px;
-    list-style: none;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 15%;
-    gap: 2%; */
     background-color: #3c2001d7;
     height: 60px;
     padding: 0 30px;
     border-radius: 20px;
     list-style: none;
     display: flex;
-    /* position: absolute; */
-    /* bottom: 0;
-    right: 15%; */
     gap: 2%;
     justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    transition: box-shadow 0.3s ease; /* Animación de la sombra */
 }
 
 .nav ul li {
@@ -623,12 +611,8 @@ h1 {
     border-radius: 30px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
-    /* position: absolute;
-    bottom: 10px;
-    right: 4cm; */
+    transition: background-color 0.3s; 
     transition: all 0.9s ease;
-    /* Aseguro que la transición se mantenga también aquí */
 }
 
 .login-button:hover {
@@ -876,6 +860,8 @@ h1 {
 }
 
 .donation-button {
+    border: none;
+    outline: 2px solid #675e4480; /* Borde amarillo al enfocar */
     width: 110%;
     height: 1.7cm;
     display: flex;
@@ -891,6 +877,8 @@ h1 {
     transition: background-color 0.3s ease;
     position: relative;
     border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    transition: box-shadow 0.3s ease; /* Animación de la sombra */
 }
 
 .first-donation-button::after {
@@ -912,6 +900,7 @@ h1 {
 
 .donation-button:hover {
     background-color: #bfcc4d;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el mouse */
 
 }
 
