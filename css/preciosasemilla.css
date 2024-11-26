@@ -509,7 +509,7 @@ h1 {
     bottom: 0;
     right: 15%;
     gap: 2%; */
-    background-color: #1e1200;
+    background-color: #3c2001d7;
     height: 60px;
     padding: 0 30px;
     border-radius: 20px;
@@ -543,6 +543,14 @@ h1 {
 
 .nav ul li a:hover::after {
     width: 80%;
+}
+
+.nav .li-active a::after {
+    content: "";
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #bfcc4d;
 }
 
 .nav ul li a {
@@ -627,13 +635,7 @@ h1 {
     background-color: #bfcc4d;
 }
 
-.li-active a::after {
-    content: "";
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    border-bottom: 1px solid #bfcc4d;
-}
+
 
 /* FIN VANI*/
 @media screen and (min-width: 480px) {
