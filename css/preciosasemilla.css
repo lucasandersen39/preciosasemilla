@@ -884,15 +884,13 @@ h1 {
     gap: 10px;
     padding: 10px 20px;
     margin: 15px;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
     color: rgb(83, 78, 78);
-    /* background-color: #f7efe0; */
-    /* border: none; */
-    /* border-radius: 20px; */
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
+    border-radius: 15px;
 }
 
 .first-donation-button::after {
@@ -918,7 +916,7 @@ h1 {
 }
 
 .button-icon {
-    width: 170px;
+    width: 80px;
 
 }
 
