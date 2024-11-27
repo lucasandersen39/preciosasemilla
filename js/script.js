@@ -22,7 +22,7 @@ botones.forEach(function (boton) {
 
         // Redirigir después de 3 segundos
         setTimeout(() => {
-            window.location.href = 'https://www.mercadopago.com'; // Cambia a tu URL
+            window.location.href = 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380849342d22c01936b414f170d76'; // Cambia a tu URL
         }, 3000); // 3 segundos de espera
     });
 });

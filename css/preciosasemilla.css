@@ -861,7 +861,7 @@ h1 {
 
 .donation-button {
     border: none;
-    outline: 2px solid #675e4480; /* Borde amarillo al enfocar */
+    outline: 2px solid #675e4480; 
     width: 110%;
     height: 1.7cm;
     display: flex;
