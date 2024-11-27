@@ -987,3 +987,7 @@ main {
         transform: rotate(360deg);
     }
 }
+
+.anotarse{
+    margin: 10%;
+}
