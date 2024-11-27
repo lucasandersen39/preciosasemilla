@@ -13,16 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
             btn.classList.remove('oculto');
         });
     } else {
-        document.querySelector('#section-user').classList.add('oculto');
+        document.querySelector('#cerrar_sesion_user').classList.add('oculto');
     }
     //Acciones al hacer click en la imagen del usuario
-    const btnUsuario = document.querySelector('#section-user');
-    if (btnUsuario && usuario) {
-        btnUsuario.addEventListener('click', function () {
-            const menuUser = btnUsuario.querySelector('.menu-user');
-            menuUser.classList.toggle('oculto');
-        });
-    }
+    /*  const btnUsuario = document.querySelector('#cerrar_sesion_user');
+     if (btnUsuario && usuario) {
+         btnUsuario.addEventListener('click', function () {
+             const menuUser = btnUsuario.querySelector('.menu-user');
+             menuUser.classList.toggle('oculto');
+         });
+     } */
     const formLogin = document.querySelector('#form_login');
     if (formLogin)
         formLogin.addEventListener('submit', function (e) {
@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (cerrar_sesion)
         cerrar_sesion.addEventListener('click', function () {
             localStorage.removeItem('usuario');
-            document.querySelector('#section-user').classList.add('oculto');
+            cerrar_sesion.classList.add('oculto');
+            location.reload();
         });
 });
