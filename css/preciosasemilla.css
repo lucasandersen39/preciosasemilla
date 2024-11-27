@@ -231,7 +231,7 @@ textarea {
     padding: 0 20px;
 }
 
-.container-card :hover{
+.card-home:hover {
     transform: scale(1.05);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -829,19 +829,21 @@ h1 {
     padding: 10px 30px;
     border-radius: 20px;
     display: flex;
-    gap: 10px; /* Ajusta el espacio entre botones */
+    gap: 10px;
+    /* Ajusta el espacio entre botones */
     justify-content: center;
-    align-items: center; /* Centra verticalmente los botones */
+    align-items: center;
+    /* Centra verticalmente los botones */
     transition: box-shadow 0.3s ease;
 }
 
 .donation-button {
-    background-color:transparent;
+    background-color: transparent;
     display: flex;
     height: 100px;
     border: none;
     width: 110%;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 5px 10px;
@@ -865,9 +867,11 @@ h1 {
 .donation-button-wrapper .donation-button:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: -5px; /* Ajusta según el espaciado */
+    right: -5px;
+    /* Ajusta según el espaciado */
     top: 10%;
-    height: 80%; /* Ajusta el tamaño vertical de la línea */
+    height: 80%;
+    /* Ajusta el tamaño vertical de la línea */
     width: 1px;
     background-color: #ffffff;
 }
@@ -979,6 +983,6 @@ main {
     }
 }
 
-.anotarse{
+.anotarse {
     margin: 10%;
 }
