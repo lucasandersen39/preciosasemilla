@@ -7,23 +7,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=More+Sugar&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/preciosasemilla.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Preciosa semilla</title>
 </head>
 
 <body>
     <header>
         <div class="header">
-            <div class="tope"></div>
-            <div class="header-content">
-                <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
-            </div>
-            <h1>PRECIOSA SEMILLA</h1>
-            <div class="user-section">
-                <div class="user-icon">
-                    <img src="img/usuario.png" alt="User Icon">
+            <div class="top-header">
+                <div class="header-content">
+                    <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
                 </div>
-
-                <a href="login.html" class="login-button">Ingresar</a>
+                <div class="user-section">
+                    <a href="login.html" class="login-button" id="link_ingresar">Iniciar sesión</a>
+                    <span id="span_nombre_usuario" class="span-usuario oculto"></span>
+                    <div class="user-icon" id="cerrar_sesion_user">
+                        <img src="img/logout.png" alt="Logout" width="30" height="30">
+                    </div>
+                </div>
+            </div>
+            <div class="title-header">
+                <h1>PRECIOSA SEMILLA</h1>
             </div>
             <nav class="nav">
                 <ul>
@@ -31,45 +35,110 @@
                     <li><a href="contacto.html">CONTACTO</a></li>
                     <li><a href="nosotros.html">NOSOTROS</a></li>
                     <li><a href="padrinaje.html">PADRINAJE</a></li>
-                    <li><a href="dona.html" class="dona">DONÁ</a></li>
+                    <li><a href="dona.html" class="btn-dona dona">DONÁ</a></li>
                 </ul>
             </nav>
+            <!-- Menu responsive -->
+            <div class="container-menu-responsive">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <img src="img/menu-hamburguesa.png" alt="User Icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="responsive-menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                        <li><a href="nosotros.html">NOSOTROS</a></li>
+                        <li><a href="padrinaje.html">PADRINAJE</a></li>
+                        <li><a href="dona.html">DONÁ</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
     <main class="main-home">
-        <section class="card-home">
-            <img src="./img/ayudanos-a-contruir-nuestro-hogar.png" alt="Ayudanos a construir nuestro hogar">
-            <h4>Conocé los avances en la construccion del nuevo hogar Preciosa Semilla.</h4>
+        <section class="container-card">
+            <div class="card-home">
+                <img src="./img/ayudanos-a-contruir-nuestro-hogar.png" alt="Ayudanos a construir nuestro hogar">
+                <h4>Conocé los avances en la construccion del nuevo hogar Preciosa Semilla.</h4>
+                <div class="btns-action-admin oculto">
+                    <button class="btn-action-admin"><img src="./img/pencil.png"></button>
+                    <button class="btn-action-admin"><img src="./img/delete.png"></button>
+                </div>
+            </div>
+
         </section>
-        <section class="card-home">
-            <img src="./img/Somos-hogar-preciosa-semilla.png" alt="Somos hogar Preciosa Semilla">
-            <h4>Te contamos un poco sobre el trabajo social del Hogar.</h4>
+        <div class="curva-contenedor">
+            <svg class="curva-decorativa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"
+                preserveAspectRatio="none">
+                <path d="M0,50 C300,150 600,0 900,50 C1200,100 1440,50 1440,50" fill="none" stroke="#fff9f91f"
+                    stroke-width="3" />
+            </svg>
+        </div>
+        <section class="container-card card-reverse">
+            <div class="card-home card-reverse">
+                <img src="./img/nosotros.jpeg" alt="Somos hogar Preciosa Semilla">
+                <h4>Te contamos un poco sobre el trabajo social del Hogar.</h4>
+                <div class="btns-action-admin oculto">
+                    <button class="btn-action-admin"><img src="./img/pencil.png"></button>
+                    <button class="btn-action-admin"><img src="./img/delete.png"></button>
+                </div>
+            </div>
         </section>
-        <section class="card-home card-home-sola">
-            <img src="./img/salud-educacion-preciosa-semilla.png"
-                alt="Salud, educación, terapia, deporte, salidas recreativas">
-            <h4 class="h4-te-contamos">Te contamos por qué necesitamos tu ayuda.</h4>
+        <div class="curva-contenedor curva-contenedor-izq">
+            <svg class="curva-decorativa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"
+                preserveAspectRatio="none">
+                <path d="M0,50 C300,150 600,0 900,50 C1200,100 1440,50 1440,50" fill="none" stroke="#fff9f91f"
+                    stroke-width="3" />
+            </svg>
+        </div>
+        <section class="container-card">
+            <div class="card-home card-home-sola">
+                <img src="./img/salud-educacion-preciosa-semilla.png"
+                    alt="Salud, educación, terapia, deporte, salidas recreativas">
+                <h4 class="h4-te-contamos">Te contamos por qué necesitamos tu ayuda.</h4>
+                <div class="btns-action-admin oculto">
+                    <button class="btn-action-admin"><img src="./img/pencil.png"></button>
+                    <button class="btn-action-admin"><img src="./img/delete.png"></button>
+                </div>
+            </div>
         </section>
+        <div class="curva-contenedor curva-contenedor-baja">
+            <svg class="curva-decorativa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"
+                preserveAspectRatio="none">
+                <path d="M0,50 C300,150 600,0 900,50 C1200,100 1440,50 1440,50" fill="none" stroke="#fff9f91f"
+                    stroke-width="3" />
+            </svg>
+        </div>
     </main>
     <footer>
-        <div class="footer-izq">
-            <button class="btn-dona">DONÁ</button>
-            <p>Necochea, Pcia. Buenos Aires</p>
-            <p>Argentina</p>
+        <div class="container-footer">
+            <div class="footer-izq">
+                <a href="dona.html" class="btn-dona">DONÁ</a>
+                <p>Necochea, Pcia. Buenos Aires</p>
+                <p>Argentina</p>
+            </div>
+            <div class="footer-der">
+                <a href="https://wa.me/22621552639" target="_blank" rel="noopener noreferrer"><img
+                        src="./img/llamada.png" alt="whatsapp" width="20" height="20"> 2262-1552639</a>
+                <a href="https://www.facebook.com/preciosasemilla" target="_blank" rel="noopener noreferrer"><img
+                        src="./img/facebook.png" alt="facebook" width="20" height="20"> HogarPreciosa</a>
+                <a href="https://www.instagram.com/preciosasemilla/" target="_blank" rel="noopener noreferrer"><img
+                        src="./img/instagram.png" alt="instagram" width="20" height="20">@PreciosaSemilla</a>
+                <a href="mailto:hogar@PreciosaSemiilla.com" rel="noopener noreferrer"><img
+                        src="./img/correo-electronico.png" alt="mail" width="20" height="20">
+                    hogar@PreciosaSemiilla.com</a>
+            </div>
         </div>
-        <div class="footer-der">
-            <a href="https://wa.me/22621552639" target="_blank"><img src="./img/llamada.png" alt="whatsapp" width="20"
-                    height="20"> 2262-1552639</a>
-            <a href="https://www.facebook.com/preciosasemilla" target="_blank"><img src="./img/facebook.png"
-                    alt="facebook" width="20" height="20"> HogarPreciosa</a>
-            <a href="https://www.instagram.com/preciosasemilla/" target="_blank"><img src="./img/instagram.png"
-                    alt="instagram" width="20" height="20">@PreciosaSemilla</a>
-            <a href="mailto:hogar@PreciosaSemiilla.com"><img src="./img/correo-electronico.png" alt="mail" width="20"
-                    height="20"> hogar@PreciosaSemiilla.com</a>
-        </div>
-    </footer>
 
+    </footer>
+    <script src="./js/preciosasemilla.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
