@@ -1038,9 +1038,9 @@ main {
 }
 
 .news-text {
-    text-align: justify;
-    /* Da un diseño más limpio al texto */
+    font-size: 1rem;
     line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
 .news-text:after {
