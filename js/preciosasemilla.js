@@ -86,4 +86,11 @@ document.addEventListener('DOMContentLoaded', function () {
             cerrar_sesion.classList.add('oculto');
             location.reload();
         });
+
+    const cardsHome = document.querySelectorAll('.card-home');
+    cardsHome.forEach(card => {
+        card.addEventListener('click', function () {
+            location.href = `avancesconstruccion.html`;
+        });
+    });
 });

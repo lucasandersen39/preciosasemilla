@@ -225,7 +225,7 @@ textarea {
     justify-content: flex-start;
 }
 
-.card-home h4 {
+.title-h4 {
     font-size: 2rem;
     margin: auto;
     padding: 0 20px;
@@ -635,7 +635,51 @@ h1 {
     /* Sombra ligera */
 }
 
+.btn-ver-mas {
+    width: fit-content;
+    margin: auto;
+}
 
+.news-image {
+    float: left;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.container-noticia {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.news-container {
+    position: relative;
+    margin: 50px 0;
+    /* Mantiene una relación entre la imagen y el texto */
+}
+
+
+
+.news-text {
+    text-align: justify;
+    /* Da un diseño más limpio al texto */
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.news-text:after {
+    content: "";
+    /* Elemento vacío para manejar el flujo */
+    display: block;
+    clear: both;
+    /* Limpia cualquier elemento flotante cuando el texto supera la imagen */
+}
 
 /* FIN VANI*/
 @media screen and (min-width: 480px) {
@@ -668,6 +712,17 @@ h1 {
 
     .btn-ver-mas {
         display: none;
+    }
+
+    .news-image {
+        float: left;
+        /* Permite que el texto rodee la imagen */
+        max-width: 380px;
+        max-height: 380px;
+        width: auto;
+        height: auto;
+        margin-right: 15px;
+        margin-bottom: 10px;
     }
 }
 
@@ -936,6 +991,9 @@ main {
     display: none;
 }
 
+.mostrado {
+    display: block;
+}
 
 /* Estilo del cuadro de diálogo */
 #dialogo {
