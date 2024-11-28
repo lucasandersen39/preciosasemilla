@@ -844,6 +844,7 @@ h1 {
 }
 
 .donation-button {
+    cursor: pointer;
     background-color: transparent;
     display: flex;
     height: 100px;
