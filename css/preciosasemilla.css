@@ -889,6 +889,20 @@ h1 {
     border-radius: 10px;
 }
 
+.elemento-clickeable {
+    position: relative; /* Necesario para posicionar el ::after */
+    display: inline-block;
+}
+
+.elemento-clickeable::after {
+    content: "";
+    border-bottom: 1px solid #ffffff;
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+
 .linea-blanca {
     border-bottom: 1px solid #fff3ec;
     width: 90%;
