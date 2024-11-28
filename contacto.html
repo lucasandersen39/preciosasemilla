@@ -14,17 +14,21 @@
   <!-- Header -->
   <header>
     <div class="header">
-      <div class="tope"></div>
-      <div class="header-content">
-        <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
-      </div>
-      <h1>PRECIOSA SEMILLA</h1>
-      <div class="user-section">
-        <div class="user-icon">
-          <img src="img/usuario.png" alt="User Icon">
+      <div class="top-header">
+        <div class="header-content">
+          <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
         </div>
-
-        <a href="login.html" class="login-button">Ingresar</a>
+        <div class="user-section">
+          <a href="login.html" class="login-button" id="link_ingresar"><img src="img/login.png" alt="Login" width="30"
+              height="30"></a>
+          <span id="span_nombre_usuario" class="span-usuario oculto"></span>
+          <div class="user-icon" id="cerrar_sesion_user">
+            <img src="img/logout.png" alt="Logout" width="30" height="30">
+          </div>
+        </div>
+      </div>
+      <div class="title-header">
+        <h1>PRECIOSA SEMILLA</h1>
       </div>
       <nav class="nav">
         <ul>
@@ -32,39 +36,59 @@
           <li class="li-active"><a href="contacto.html">CONTACTO</a></li>
           <li><a href="nosotros.html">NOSOTROS</a></li>
           <li><a href="padrinaje.html">PADRINAJE</a></li>
-          <li><a href="dona.html" class="dona">DONÁ</a></li>
+          <li><a href="dona.html" class="btn-dona dona">DONÁ</a></li>
         </ul>
       </nav>
+      <!-- Menu responsive -->
+      <div class="container-menu-responsive">
+        <div class="hamburger" onclick="toggleMenu()">
+          <img src="img/menu-hamburguesa.png" alt="User Icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="responsive-menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="padrinaje.html">PADRINAJE</a></li>
+            <li><a href="dona.html">DONÁ</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
+
 
   <!-- Main content -->
   <main>
     <section class="contact-section" id="contacto">
       <div class="form-container">
         <h2>Contactanos</h2>
-        <form action="#" class="form-login">
+        <form action="#" class="form-login" id="form_contacto">
           <div>
             <label for="name">Nombre</label>
-            <span class="mensaje-error oculto">El campo es obligatorio</span>
+            <span class="mensaje-error oculto" id="error_nombre_contacto">El campo es obligatorio</span>
           </div>
           <input type="text" id="name" placeholder="Escribe tu nombre">
           <div>
             <label for="email">Email <span class="required">*</span></label>
-            <span class="mensaje-error oculto">El campo es obligatorio</span>
+            <span class="mensaje-error oculto" id="error_email_contacto">El campo es obligatorio</span>
           </div>
           <input type="email" id="email" placeholder="Escribe tu email" required>
 
           <div>
             <label for="comment">Escribí aquí tu comentario</label>
-            <span class="mensaje-error oculto">El campo es obligatorio</span>
+            <span class="mensaje-error oculto" id="error_comentario_contacto">El campo es obligatorio</span>
           </div>
           <textarea id="comment" placeholder="Tu comentario"></textarea>
 
           <button type="submit" class="btn-form">Enviar</button>
         </form>
       </div>
-      <div class="info-container">
+      <div class="info-container text-container">
         <h2>Deducí tu donación del Impuesto a las ganancias.</h2>
         <p>La ley del Impuesto a las Ganancias prevé que los donantes puedan deducir del pago del impuesto, un
           porcentaje de acuerdo a los límites establecidos por ley.</p>
@@ -74,22 +98,30 @@
   </main>
 
   <footer>
-    <div class="footer-izq">
-      <button class="btn-dona">DONÁ</button>
-      <p>Necochea, Pcia. Buenos Aires</p>
-      <p>Argentina</p>
+    <div class="container-footer">
+      <div class="footer-izq">
+        <a href="dona.html" class="btn-dona">DONÁ</a>
+
+        <p>Necochea, Pcia. Buenos Aires</p>
+        <p>Argentina</p>
+      </div>
+      <div class="footer-der">
+        <a href="https://wa.me/22621552639" target="_blank" rel="noopener noreferrer"><img src="./img/llamada.png"
+            alt="whatsapp" width="20" height="20"> 2262-1552639</a>
+        <a href="https://www.facebook.com/preciosasemilla" target="_blank" rel="noopener noreferrer"><img
+            src="./img/facebook.png" alt="facebook" width="20" height="20"> HogarPreciosa</a>
+        <a href="https://www.instagram.com/preciosasemilla/" target="_blank" rel="noopener noreferrer"><img
+            src="./img/instagram.png" alt="instagram" width="20" height="20">@PreciosaSemilla</a>
+        <a href="mailto:hogar@PreciosaSemiilla.com" rel="noopener noreferrer"><img src="./img/correo-electronico.png"
+            alt="mail" width="20" height="20">
+          hogar@PreciosaSemiilla.com</a>
+      </div>
     </div>
-    <div class="footer-der">
-      <a href="https://wa.me/22621552639" target="_blank"><img src="./img/llamada.png" alt="whatsapp" width="20"
-          height="20"> 2262-1552639</a>
-      <a href="https://www.facebook.com/preciosasemilla" target="_blank"><img src="./img/facebook.png" alt="facebook"
-          width="20" height="20"> HogarPreciosa</a>
-      <a href="https://www.instagram.com/preciosasemilla/" target="_blank"><img src="./img/instagram.png"
-          alt="instagram" width="20" height="20">@PreciosaSemilla</a>
-      <a href="mailto:hogar@PreciosaSemiilla.com"><img src="./img/correo-electronico.png" alt="mail" width="20"
-          height="20"> hogar@PreciosaSemiilla.com</a>
-    </div>
+
   </footer>
+  <script src="./js/preciosasemilla.js"></script>
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=More+Sugar&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/preciosasemilla.css">
+  <title>Preciosa semilla</title>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="top-header">
+        <div class="header-content">
+          <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
+        </div>
+        <div class="user-section">
+          <a href="login.html" class="login-button" id="link_ingresar"><img src="img/login.png" alt="Login" width="30"
+              height="30"></a>
+          <span id="span_nombre_usuario" class="span-usuario oculto"></span>
+          <div class="user-icon" id="cerrar_sesion_user">
+            <img src="img/logout.png" alt="Logout" width="30" height="30">
+          </div>
+        </div>
+      </div>
+      <div class="title-header">
+        <h1>PRECIOSA SEMILLA</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="padrinaje.html">PADRINAJE</a></li>
+          <li class="li-active"><a href="dona.html" class="btn-dona dona">DONÁ</a></li>
+        </ul>
+      </nav>
+      <!-- Menu responsive -->
+      <div class="container-menu-responsive">
+        <div class="hamburger" onclick="toggleMenu()">
+          <img src="img/menu-hamburguesa.png" alt="User Icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="responsive-menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="padrinaje.html">PADRINAJE</a></li>
+            <li><a href="dona.html">DONÁ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <section class="dona-container">
+
+      <div class="botones-container">
+        <button class="donation-button btn-redirigir">
+          <img src="img/mPago.png" alt="Icono" class="button-icon">
+          <span>$5.000</span>
+        </button>
+        <!-- Agregar una linea blanca entre los botones -->
+        <div class="linea-blanca"></div>
+        <button class="donation-button btn-redirigir">
+          <img src="img/mPago.png" alt="Icono" class="button-icon">
+          <span>$10.000</span>
+        </button>
+        <div class="linea-blanca"></div>
+        <button class="donation-button btn-redirigir">
+          <img src="img/mPago.png" alt="Icono" class="button-icon">
+          <span>$20.000</span>
+        </button>
+        <div class="linea-blanca"></div>
+        <button class="donation-button ">
+          <img src="img/mPago.png" alt="Icono" class="button-icon">
+          <span>$30.000</span>
+        </button>
+      </div>
+      <!-- Cuadro de diálogo -->
+      <div id="dialogo" class="dialogo-oculto">
+        <div class="dialogo-contenido">
+          <p id="mensaje-dialogo">Redirigiendo al sitio, aguarde...</p>
+          <div class="animacion-carga"></div>
+        </div>
+      </div>
+
+      <div class="text-container">
+        <h2>Doná</h2>
+        <p>Ayudanos a seguir mejorando la calidad de vida de <strong>nuestros niños</strong>.
+        <div style="margin-top: 20px;">Nos financiamos principalmente a través de socios, donantes individuales y
+          padrinos
+          que hacen aportes regulares a nuestra <b>institución</b>.</div>
+        <div style="margin-top: 20px;"> Asimismo percibimos fondos públicos
+          como subsidios y otros apoyos estatales, organizamos eventos de recaudación de fondos y
+          recibimos donaciones para cubrir los gastos en <strong>alimentos, vestimenta, útiles,
+            medicamentos que necesitan los chicos</strong>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container-footer">
+      <div class="footer-izq">
+        <a href="dona.html" class="btn-dona">DONÁ</a>
+
+        <p>Necochea, Pcia. Buenos Aires</p>
+        <p>Argentina</p>
+      </div>
+      <div class="footer-der">
+        <a href="https://wa.me/22621552639" target="_blank" rel="noopener noreferrer"><img src="./img/llamada.png"
+            alt="whatsapp" width="20" height="20"> 2262-1552639</a>
+        <a href="https://www.facebook.com/preciosasemilla" target="_blank" rel="noopener noreferrer"><img
+            src="./img/facebook.png" alt="facebook" width="20" height="20"> HogarPreciosa</a>
+        <a href="https://www.instagram.com/preciosasemilla/" target="_blank" rel="noopener noreferrer"><img
+            src="./img/instagram.png" alt="instagram" width="20" height="20">@PreciosaSemilla</a>
+        <a href="mailto:hogar@PreciosaSemiilla.com" rel="noopener noreferrer"><img src="./img/correo-electronico.png"
+            alt="mail" width="20" height="20">
+          hogar@PreciosaSemiilla.com</a>
+      </div>
+    </div>
+
+  </footer>
+  <script src="./js/preciosasemilla.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

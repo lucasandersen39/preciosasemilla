@@ -15,6 +15,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #a2988b;
     color: #fff3ec;
+    text-align: start;
+    font-size: 16px;
+    line-height: 1.2;
 }
 
 h1,
@@ -22,10 +25,11 @@ h2 {
     font-family: 'Montserrat', cursive;
     color: #fdfff0;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 h2 {
-    font-family: 'More sugar';
+    font-size: 2rem;
 
 }
 
@@ -33,6 +37,7 @@ p,
 a {
     font-size: 14px;
     text-decoration: none;
+    color: #fff3ec;
 }
 
 ul {
@@ -69,14 +74,14 @@ main {
 .text-container {
     margin: 5%;
     width: 90%;
-    text-align: center;
+    /* text-align: center; */
 }
 
-.text-container h2 {
+/* .text-container h2 {
     font-size: 2rem;
     color: #406c7d;
     margin-bottom: 1rem;
-}
+} */
 
 .text-container p {
     font-size: 1rem;
@@ -109,70 +114,11 @@ main {
     background-color: #aab739;
 }
 
-/*FIN AMPI*/
-
-/* Header */
-/* .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(162, 152, 139, 0.8);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.site-title {
-    font-size: 24px;
-}
-
-.navbar {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #fff3ec;
-    padding: 5px 10px;
-}
-
-.navbar .active {
-    background-color: #bfcc4d;
-    color: #406c7d;
-    border-radius: 5px;
-}
-
-.navbar .donate,
-.footer .donate,
-.donate {
-    background-color: #ffffff3f;
-    color: #406c7d;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-.login {
-    background-color: transparent;
-    border: 1px solid #fff3ec;
-    padding: 5px 10px;
-    color: #fff3ec;
-    border-radius: 5px;
-} */
 
 /* Contact Section */
-.contact-section {
+.contact-section,
+#nosotros,
+#padrinazgo {
     display: flex;
     align-items: center;
     /* Centra verticalmente ambos bloques */
@@ -184,15 +130,28 @@ main {
     /* Espaciado alrededor de la sección */
 }
 
-.form-container,
-.info-container {
-    width: 45%;
+.form {
+    width: 100%;
     /* Ajusta el ancho de cada bloque */
     display: flex;
     flex-direction: column;
     align-items: center;
     /* Centra horizontalmente el contenido */
     text-align: center;
+    /* Centra el texto */
+
+}
+
+.form-container,
+.info-container {
+    width: 45%;
+    /* Ajusta el ancho de cada bloque */
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; */
+    /* Centra horizontalmente el contenido */
+    /* text-align: center; */
     /* Centra el texto */
 }
 
@@ -237,13 +196,14 @@ textarea {
     align-self: center;
 }
 
+/*FIN AMPI*/
+
 /*HOME*/
 .main-home {
     display: grid;
-    gap: 20px;
+    gap: 60px;
     grid-template-columns: 1fr;
     padding: 20px 0;
-
 }
 
 .card-home {
@@ -252,32 +212,83 @@ textarea {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background-color: #f7efe0;
+    background-color: #a2988b;
     border-radius: 10px;
+    width: calc(min(800px, 100%));
     position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card-reverse {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .card-home h4 {
-    font-family: 'More sugar';
-    font-size: 20px;
-    color: #1e1200;
-    text-align: center;
-    max-width: 300px;
+    font-size: 2rem;
     margin: auto;
+    padding: 0 20px;
+}
+
+.card-home:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-home img {
     width: 90%;
-    max-width: 300px;
+    max-width: 50vh;
     border-radius: 10px;
 }
+
+.container-card {
+    position: relative;
+}
+
+.curva-contenedor {
+    position: absolute;
+    background-color: transparent;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+    top: 60%;
+    right: 20%;
+    width: 570px;
+    transform: rotate3d(13, 32, 51, 268deg) translateY(240%);
+
+}
+
+.curva-contenedor-izq {
+    top: 140%;
+    left: 15%;
+    transform: rotate3d(13, 32, 51, 268deg) translateY(-240%);
+}
+
+.curva-contenedor-baja {
+    top: 200%;
+
+    transform: rotate3d(13, 32, 51, 268deg) translateY(240%);
+}
+
+.curva-decorativa {
+    position: absolute;
+    bottom: 0;
+    /* Posiciona la curva al fondo del contenedor */
+    left: 0;
+    width: 100%;
+    /* Asegura que ocupe el ancho completo */
+    height: 100%;
+    /* Ajusta la altura según sea necesario */
+}
+
 
 .form-login {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     margin: auto;
-    padding: 30px;
+    padding: 0 30px;
     width: 100%;
 }
 
@@ -289,31 +300,57 @@ textarea {
 }
 
 .form-login h5 {
-    font-family: 'More sugar';
+    /* font-family: 'More sugar'; */
     font-size: 26px;
     color: #fff3ec;
     text-align: center;
     margin: 0;
 }
 
-.oculto {
-    display: none;
+.mensaje-error {
+    color: red;
+    font-size: 14px;
+    margin: 0;
 }
 
+
+
 /* FOOTER*/
-button.btn-dona {
+.btn-dona {
     font-family: 'More sugar';
     color: #406c7d;
     padding: 5px 26px;
     border-radius: 30px;
     border: none;
     font-size: 26px;
-    margin: 10px;
+    margin: 10px auto;
     cursor: pointer;
     background-color: #fdfff0;
+    transform: scale(1);
+    transition: all 1s ease-out;
+    max-width: 170px;
+}
+
+.nav ul li a.btn-dona {
+    color: #406c7d;
+    /* Azul */
+}
+
+.btn-dona:hover {
+    transform: scale(1.2);
 }
 
 footer {
+    background-color: #887e72;
+    color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     background-color: #887e72;
@@ -327,6 +364,8 @@ footer {
 
 .footer-izq {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-der {
@@ -357,8 +396,13 @@ button.btn-action-admin {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: #ffc0ad;
+    background-color: #e9c5b9;
     border: 0;
+    cursor: pointer;
+}
+
+button.btn-action-admin:hover {
+    background-color: #ffc0ad;
 }
 
 button.btn-action-admin img {
@@ -382,50 +426,79 @@ button.btn-action-admin img {
     top: 0px;
 }
 
+header {
+    height: 20vh;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 95%;
+    height: 50px;
+}
+
+.title-header {
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
 .header {
     background-color: #625c54;
-    border-bottom: 2px solid #ddd;
-    padding: 10px 0;
+    /* border-bottom: 2px solid #ddd; */
+    /* padding: 10px 0; */
     width: 100%;
-    height: 5cm;
+    height: 100%;
     /* Ajustar altura con porcentaje */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     background-image: url('../img/FONDO-LOGO.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    /* position: relative; */
+
+
+
 }
 
 /* Header content */
-.header-content {
+/* .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-}
+} */
 
 /* Logo */
 .logo {
-    margin-left: 5cm;
-    width: 9%;
+    /* margin-left: 5cm;
+    width: 9%; */
     /* Logo ajustado a un porcentaje del contenedor */
-    height: auto;
+    /* height: auto;
     margin-top: 20px;
     position: absolute;
     bottom: 10px;
     left: 3%;
-    transition: all 0.9s ease;
+    transition: all 0.9s ease; */
     /* Transición suave para todas las propiedades */
 
+    width: 14%;
+    position: absolute;
+    bottom: 50%;
+    left: 3%;
+    transition: all 0.9s ease;
+    transform: translateY(50%);
 }
 
 /*title*/
 h1 {
-
     text-align: center;
     font-size: 3vw;
     /* Ajuste en función del ancho de la pantalla */
@@ -436,43 +509,65 @@ h1 {
 }
 
 /* Navigation menu */
-nav ul {
-    background-color: rgb(220, 216, 212);
-    height: 20%;
-    /* Ajusta la altura del menú de navegación */
+.nav ul {
+    background-color: #3c2001d7;
+    height: 60px;
+    padding: 0 30px;
     border-radius: 20px;
     list-style: none;
     display: flex;
-    position: absolute;
-    bottom: 3%;
-    right: 25%;
+    gap: 2%;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra ligera */
+    transition: box-shadow 0.3s ease;
+    /* Animación de la sombra */
 }
 
-nav ul li {
-    padding: 10px;
+.nav ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
 }
 
-nav ul li a {
+.nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    margin: 0 auto;
+    border-bottom: 2px solid #bfcc4d;
+    transition: width 0.3s ease;
+}
+
+.nav ul li a:hover::after {
+    width: 80%;
+}
+
+.nav .li-active a::after {
+    content: "";
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #bfcc4d;
+}
+
+.nav ul li a {
     text-align: center;
     text-decoration: none;
-    color: #1e1200;
+    color: #fff3ec;
     font-weight: bold;
     padding: 5px 10px 5px 10px;
-
-}
-
-nav ul li a:hover {
-    background-color: #bfcc4d;
-    color: #1e1200;
-    border-radius: 20px;
+    font-size: 18px;
 }
 
 .dona {
-    color: #406c7d;
-    font-family: fantasy;
-    letter-spacing: 3px;
     /* Aumenta el espacio entre letras */
-    text-align: center
+    text-align: center;
+    font-size: 18px;
 }
 
 /* User section */
@@ -480,50 +575,77 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    /* position: absolute;
+    right: 10px;
+    bottom: 5px; */
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-user {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #a2988b;
+    padding: 10px;
+    z-index: 1;
+    width: 200px;
+    color: #fff3ec;
+    text-align: center;
 }
 
 /* User icon */
 .user-icon img {
-    width: 60px;
+    width: 30px;
     border-radius: 50%;
-    position: absolute;
+    /* position: absolute;
     bottom: 10px;
-    right: 2.5cm;
+    right: 2.5cm; */
     transition: all 0.9s ease;
     /* Aseguro que la transición se mantenga también aquí */
+}
+
+.span-usuario {
+    color: #000000;
+    font-weight: 600;
 }
 
 /* Login button */
 .login-button {
     padding: 10px 20px;
-    background-color: #a2988b;
     color: #1e1200;
     border: none;
     border-radius: 30px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
-    position: absolute;
-    bottom: 10px;
-    right: 4cm;
     transition: all 0.9s ease;
-    /* Aseguro que la transición se mantenga también aquí */
 }
 
 .login-button:hover {
-    background-color: #bfcc4d;
+    color: #1e1200;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
 }
 
-.li-active {
-    background-color: #bfcc4d;
-    color: #1e1200;
-    border-radius: 20px;
-}
+
 
 /* FIN VANI*/
 @media screen and (min-width: 480px) {
     .card-home {
         flex-direction: row;
+        height: 60vh;
+    }
+
+    .card-reverse {
+        flex-direction: row-reverse;
     }
 
     .card-home img {
@@ -531,20 +653,43 @@ nav ul li a:hover {
     }
 
     footer {
+        padding: 20px 5%;
+
+    }
+
+    .container-footer {
         flex-direction: row;
         /* justify-content: space-evenly; */
-        padding: 20px 5%;
     }
 
     .footer-der {
         padding: 0;
     }
+
+    .btn-ver-mas {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* .header {
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    /* .card-home {
+        grid-template-columns: 1fr;
+    } */
 }
 
 @media screen and (min-width: 768px) {
-    .main-home {
+    /* .main-home {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 
     section.card-home-sola {
         grid-column: 1 / -1;
@@ -554,44 +699,303 @@ nav ul li a:hover {
     section.card-home-sola h4 {
         font-size: 26px;
     }
-}
 
-
-@media (max-width: 980px) {
-    .logo {
-        width: 9%;
-        /* Reduzco el tamaño del logo */
-        margin-left: 4%;
-        margin-bottom: 10%;
-        transition: all 0.9s ease;
-        /* Aseguro que la transición se mantenga también aquí */
+    header {
+        height: 40vh;
     }
 }
 
-@media (max-width: 1270px) {
+
+/* @media (max-width: 980px) {
     .logo {
         width: 9%;
+        margin-left: 4%;
+        margin-bottom: 10%;
+        transition: all 0.9s ease;
+    }
+} */
+
+@media (max-width: 1270px) {
+    .logo {
+        /* width: 9%; */
         /* Reduzco el tamaño del logo */
-        margin-left: 5%;
+        /* margin-left: 5%; */
         transition: all 0.9s ease;
         /* Aseguro que la transición se mantenga también aquí */
+        top: 0;
+        bottom: 100%;
+        transform: translateY(10px);
     }
 }
 
 @media (max-width: 1030px) {
-    .login-button {
+    /* .login-button {
         position: absolute;
         bottom: 10px;
         right: 10px;
         transition: all 0.9s ease;
-        /* Aseguro que la transición se mantenga también aquí */
+    } */
+
+}
+
+
+
+/* agregado vani ultimo*/
+.container-menu-responsive {
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Estilo del menú hamburguesa */
+.hamburger {
+    display: none;
+    /* Ocultar inicialmente */
+    width: 40px;
+    /* Ancho del ícono */
+    height: 40px;
+    /* Alto del ícono */
+    cursor: pointer;
+    /* position: absolute; */
+    /* Permite posicionarlo donde desees */
+    /* top: 80%; */
+    /* Ajustar el ícono en relación al top */
+    /* left: 5% */
+}
+
+.responsive-menu {
+    display: none;
+    /* Oculto por defecto */
+    position: absolute;
+    top: 40px;
+    /* Ajusta según la posición de tu header o menú */
+    left: 0;
+    width: 100%;
+    background-color: #cdc4b9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    height: fit-content;
+    text-align: left;
+}
+
+.responsive-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.responsive-menu ul li {
+    margin: 10px 0;
+}
+
+.responsive-menu ul li a {
+    text-decoration: none;
+    color: #1e1200;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.responsive-menu ul li a:hover {
+    color: #bfcc4d;
+}
+
+/* Para mostrar el menú cuando se activa */
+.responsive-menu.show {
+    display: block;
+
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 780px) {
+    .nav ul {
+        display: none;
+        /* Ocultar el menú normal */
+
     }
 
-    .user-icon {
-        position: absolute;
-        bottom: 5px;
-        right: 10px;
-        transition: all 0.9s ease;
-        /* Aseguro que la transición se mantenga también aquí */
+    .hamburger {
+        display: flex;
+        /* Mostrar el menú hamburguesa */
     }
+
+}
+
+.dona-container {
+    display: flex;
+    margin-right: 5%;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.donation-button-wrapper {
+    height: auto;
+    padding: 10px 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    /* Ajusta el espacio entre botones */
+    justify-content: center;
+    align-items: center;
+    /* Centra verticalmente los botones */
+    transition: box-shadow 0.3s ease;
+}
+
+.donation-button {
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    height: 100px;
+    border: none;
+    width: 110%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 5px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff3ec;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donation-button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la línea divisoria */
+.donation-button-wrapper .donation-button:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    /* Ajusta según el espaciado */
+    top: 10%;
+    height: 80%;
+    /* Ajusta el tamaño vertical de la línea */
+    width: 1px;
+    background-color: #ffffff;
+}
+
+/* Sin efecto hover en la línea */
+.donation-button-wrapper .donation-button::after:hover {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.linea-blanca {
+    border-bottom: 1px solid #fff3ec;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Estilo para los dos divs */
+.botones-container,
+.texto-dona-container {
+    padding: 8%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+.texto-dona-container {
+
+    color: white;
+    font-family: 'More sugar';
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2;
+    /* Ajusta el interlineado (espacio entre líneas) */
+    letter-spacing: 2px;
+    /* Ajusta el interletrado (espacio entre letras) */
+
+}
+
+
+
+.button-icon {
+    width: 80px;
+
+}
+
+main {
+    background-color: #a2988b;
+}
+
+.oculto {
+    display: none;
+}
+
+
+/* Estilo del cuadro de diálogo */
+#dialogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#dialogo.dialogo-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Texto del mensaje */
+#mensaje-dialogo {
+    margin-bottom: 20px;
+    color: rgb(99, 90, 90);
+    font-size: 16px;
+}
+
+.dialogo-contenido {
+    background-color: rgb(255, 246, 246);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Animación de carga */
+.animacion-carga {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #a09f9f;
+    border-top: 4px solid #bfcc4d;
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.anotarse {
+    margin: 10%;
 }
