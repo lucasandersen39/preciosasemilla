@@ -119,12 +119,15 @@ main {
 
 .form-container,
 .info-container {
-    width: 45%;
+    width: 300px;
 }
-
+.anotarse-form{
+    width: 120%;
+    margin-left: -10%;
+}
 input,
 textarea {
-    width: 90%;
+   /* width: 90%;*/
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -372,7 +375,7 @@ header {
     justify-content: space-between;
     align-items: flex-end;
     width: 95%;
-    height: 50px;
+    height: 60px; /* Igual al alto del menú */
 }
 
 .title-header {
@@ -611,7 +614,8 @@ h1 {
     left: 0;
     width: 100%;
     background-color: #cdc4b9;
-    border-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 100;
     height: fit-content;
@@ -621,8 +625,8 @@ h1 {
 .responsive-menu ul {
     list-style: none;
     margin: 0;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 10px;
+    text-align: left;
 }
 
 .responsive-menu ul li {
