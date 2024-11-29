@@ -480,6 +480,9 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
+    position:absolute;
+    bottom: 10px; /* Alineado con el menú */
+    right: 30px; /* Espaciado desde el lado derecho */
 }
 
 .user-icon {
