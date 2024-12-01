@@ -121,13 +121,15 @@ main {
 .info-container {
     width: 300px;
 }
-.anotarse-form{
+
+.anotarse-form {
     width: 120%;
     margin-left: -10%;
 }
+
 input,
 textarea {
-   /* width: 90%;*/
+    /* width: 90%;*/
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -395,7 +397,8 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 95%;
-    height: 60px; /* Igual al alto del menú */
+    height: 60px;
+    /* Igual al alto del menú */
 }
 
 .title-header {
@@ -500,9 +503,6 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
-    position:absolute;
-    bottom: 10px; /* Alineado con el menú */
-    right: 30px; /* Espaciado desde el lado derecho */
 }
 
 .user-icon {
