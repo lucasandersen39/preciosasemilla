@@ -15,18 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         document.querySelector('#cerrar_sesion_user').classList.add('oculto');
     }
-    //Acciones al hacer click en la imagen del usuario
-    /*  const btnUsuario = document.querySelector('#cerrar_sesion_user');
-     if (btnUsuario && usuario) {
-         btnUsuario.addEventListener('click', function () {
-             const menuUser = btnUsuario.querySelector('.menu-user');
-             menuUser.classList.toggle('oculto');
-         });
-     } */
+
     const formLogin = document.querySelector('#form_login');
     if (formLogin)
         formLogin.addEventListener('submit', function (e) {
             e.preventDefault();
+            let campos_completos = true;
             const email = document.querySelector('#email').value;
             const password = document.querySelector('#password').value;
             const spanUsuario = document.querySelector('#error_usuario');
@@ -37,21 +31,25 @@ document.addEventListener('DOMContentLoaded', function () {
             spanAcceso.classList.add('oculto');
             if (email == '') {
                 spanUsuario.classList.remove('oculto');
+                campos_completos = false;
             }
             if (password == '') {
                 spanPassword.classList.remove('oculto');
+                campos_completos = false;
             }
-            if (email != 'admin@admin.com' || password != 'Admin') {
-                spanAcceso.classList.remove('oculto');
+            if (campos_completos) {
+                if (email != 'admin@admin.com' || password != 'Admin') {
+                    spanAcceso.classList.remove('oculto');
 
-            } else {
-                localStorage.setItem('usuario', 'Administrador');
-                const btnsAdmin = document.querySelectorAll('.btns-action-admin');
-                btnsAdmin.forEach(btn => {
-                    btn.classList.remove('oculto');
-                });
-                location.href = 'index.html';
-                //Guardar el nombre de usuario en el local storage
+                } else {
+                    localStorage.setItem('usuario', 'Administrador');
+                    const btnsAdmin = document.querySelectorAll('.btns-action-admin');
+                    btnsAdmin.forEach(btn => {
+                        btn.classList.remove('oculto');
+                    });
+                    location.href = 'index.html';
+                    //Guardar el nombre de usuario en el local storage
+                }
             }
         });
 
@@ -59,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (formContacto)
         formContacto.addEventListener('submit', function (e) {
             e.preventDefault();
+            let hay_error = false;
             const nombre = document.querySelector('#name').value;
             const email = document.querySelector('#email').value;
             const mensaje = document.querySelector('#comment').value;
@@ -70,12 +69,19 @@ document.addEventListener('DOMContentLoaded', function () {
             spanComentario.classList.add('oculto');
             if (nombre == '') {
                 spanNombre.classList.remove('oculto');
+                hay_error = true;
             }
             if (email == '') {
                 spanEmail.classList.remove('oculto');
+                hay_error = true;
             }
             if (mensaje == '') {
                 spanComentario.classList.remove('oculto');
+                hay_error = true;
+            }
+            if (!hay_error) {
+                document.querySelector('#mensaje_enviado').classList.remove('oculto');
+                formContacto.reset();
             }
         });
 
@@ -93,4 +99,23 @@ document.addEventListener('DOMContentLoaded', function () {
             location.href = `avancesconstruccion.html`;
         });
     });
+
+    const emailContacto = document.querySelector('#email');
+    if (emailContacto) {
+        //Evento cuando el usuario sale del input
+        emailContacto.addEventListener('blur', function () {
+            const email = emailContacto.value;
+            const spanEmail = document.querySelector('#error_email_incorrecto_contacto');
+            spanEmail.classList.add('oculto');
+            if (email != '' && !validate_email(email)) {
+                spanEmail.classList.remove('oculto');
+            }
+        });
+    }
+
+    function validate_email(email) {
+        const re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
 });
