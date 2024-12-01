@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let campos_completos = true;
             const email = document.querySelector('#email').value;
             const password = document.querySelector('#password').value;
-            const spanUsuario = document.querySelector('#error_usuario');
+            const spanUsuario = document.querySelector('#error_email_contacto');
             const spanPassword = document.querySelector('#error_password');
             const spanAcceso = document.querySelector('#error_acceso_incorrecto');
             spanUsuario.classList.add('oculto');
@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const spanEmail = document.querySelector('#error_email_incorrecto_contacto');
             spanEmail.classList.add('oculto');
             if (email != '' && !validate_email(email)) {
+                const spanEmailrequired = document.querySelector('#error_email_contacto');
+                spanEmailrequired.classList.add('oculto');
                 spanEmail.classList.remove('oculto');
             }
         });
