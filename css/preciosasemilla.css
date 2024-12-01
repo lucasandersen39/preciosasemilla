@@ -242,6 +242,7 @@ textarea {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
     width: 90%;
 }
 
@@ -252,10 +253,29 @@ textarea {
     margin: 0;
 }
 
+.form-login input::placeholder,
+.form-login textarea::placeholder {
+    color: #4d4d4d;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .mensaje-error {
     color: red;
     font-size: 14px;
     margin: 0;
+    text-wrap-mode: nowrap;
+}
+
+.mensaje-exito {
+    color: green;
+    font-size: 14px;
+    margin: 0;
+    text-wrap-mode: nowrap;
+}
+
+.acceso-incorrecto {
+    text-align: center;
 }
 
 .btn-dona {
@@ -373,7 +393,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     width: 95%;
     height: 60px; /* Igual al alto del menú */
 }
@@ -517,7 +537,7 @@ h1 {
 }
 
 .login-button {
-    padding: 10px 20px;
+    padding: 0px 20px;
     color: #1e1200;
     border: none;
     border-radius: 30px;
@@ -566,6 +586,9 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+    }
 
     .nav ul {
         flex-direction: column;
@@ -598,7 +621,7 @@ h1 {
 }
 
 .container-menu-responsive {
-    width: 100%;
+    width: 100px;
     position: relative;
     padding-left: 20px;
 }
@@ -642,6 +665,10 @@ h1 {
     font-size: 1.2em;
     font-weight: bold;
     transition: color 0.3s ease;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    padding: 5px 15px;
 }
 
 .responsive-menu ul li a:hover {
@@ -660,6 +687,11 @@ h1 {
 
     .hamburger {
         display: flex;
+    }
+
+    .container-menu-responsive {
+        width: 100%;
+        display: block;
     }
 
 }
@@ -725,7 +757,7 @@ h1 {
 }
 
 .elemento-clickeable {
-    position: relative; 
+    position: relative;
     display: inline-block;
 }
 
@@ -786,6 +818,10 @@ main {
 
 .btn-volver {
     width: fit-content;
+}
+
+.btn-volver a {
+    height: auto;
 }
 
 #dialogo {
@@ -879,6 +915,7 @@ main {
 .news-text {
     text-align: justify;
     line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
 .news-text:after {
