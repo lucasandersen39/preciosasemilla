@@ -69,22 +69,25 @@
         <h2>Contactanos</h2>
         <form action="#" class="form-login" id="form_contacto">
           <div>
-            <label for="name">Nombre</label>
+            <label for="name">Nombre<span class="required">*</span></label>
             <span class="mensaje-error oculto" id="error_nombre_contacto">El campo es obligatorio</span>
           </div>
           <input type="text" id="name" placeholder="Escribe tu nombre">
           <div>
             <label for="email">Email <span class="required">*</span></label>
             <span class="mensaje-error oculto" id="error_email_contacto">El campo es obligatorio</span>
+            <span class="mensaje-error oculto" id="error_email_incorrecto_contacto">No es un email válido</span>
+
           </div>
-          <input type="email" id="email" placeholder="Escribe tu email" required>
+          <input type="email" id="email" placeholder="Escribe tu email">
 
           <div>
-            <label for="comment">Escribí aquí tu comentario</label>
+            <label for="comment">Escribí aquí tu comentario<span class="required">*</span></label>
             <span class="mensaje-error oculto" id="error_comentario_contacto">El campo es obligatorio</span>
           </div>
           <textarea id="comment" placeholder="Tu comentario"></textarea>
-
+          <span class="mensaje-error oculto" id="error_envio_incorrecto">Hubo un error al enviar el mensaje.</span>
+          <span class="mensaje-exito oculto" id="mensaje_enviado">Mensaje enviado con éxito.</span>
           <button type="submit" class="btn-form">Enviar</button>
         </form>
       </div>
