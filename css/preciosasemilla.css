@@ -115,7 +115,7 @@ main {
     justify-content: center;
     gap: 5%;
     padding: 10%;
-    min-height: 100vh;
+   
 }
 
 .contact-section {
@@ -936,3 +936,4 @@ main {
     display: block;
     clear: both;
 }
+
