@@ -115,7 +115,7 @@ main {
     justify-content: center;
     gap: 5%;
     padding: 10%;
-   
+
 }
 
 .contact-section {
@@ -247,10 +247,11 @@ textarea {
 .form-login {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: auto;
     padding: 0 30px;
     width: 100%;
+    min-width: 300px;
 }
 
 .form-login div {
@@ -936,4 +937,3 @@ main {
     display: block;
     clear: both;
 }
-
