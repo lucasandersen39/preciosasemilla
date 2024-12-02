@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="img\PRECIOSA-SEMILLA-LOGO.png" type="image/png">
   <title>Preciosa Semilla</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=More+Sugar&display=swap"
@@ -19,41 +19,6 @@
         <div class="header-content">
           <img src="img\PRECIOSA-SEMILLA-LOGO.png" alt="Preciosa Semilla Logo" class="logo">
         </div>
-
-      </div>
-      <div class="title-header">
-        <h1>PRECIOSA SEMILLA</h1>
-      </div>
-      <div class="top-header">
-        <!-- Menu responsive -->
-        <div class="container-menu-responsive">
-          <div class="hamburger" onclick="toggleMenu()">
-            <img src="img/menu-hamburguesa.png" alt="User Icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <nav class="responsive-menu">
-            <ul>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="contacto.html">CONTACTO</a></li>
-              <li><a href="nosotros.html">NOSOTROS</a></li>
-              <li><a href="padrinaje.html">PADRINAJE</a></li>
-              <li><a href="dona.html">DONÁ</a></li>
-            </ul>
-          </nav>
-        </div>
-        <nav class="nav">
-          <ul>
-            <li class="li-active"><a href="index.html">HOME</a></li>
-            <li><a href="contacto.html">CONTACTO</a></li>
-            <li><a href="nosotros.html">NOSOTROS</a></li>
-            <li><a href="padrinaje.html">PADRINAJE</a></li>
-            <li><a href="dona.html" class="btn-dona dona">DONÁ</a></li>
-          </ul>
-        </nav>
-
         <div class="user-section">
           <a href="login.html" class="login-button" id="link_ingresar"><img src="img/login.png" alt="Login" width="30"
               height="30"></a>
@@ -63,25 +28,62 @@
           </div>
         </div>
       </div>
+      <div class="title-header">
+        <h1>PRECIOSA SEMILLA</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li class="li-active"><a href="padrinaje.html">PADRINAJE</a></li>
+          <li><a href="dona.html" class="btn-dona dona">DONÁ</a></li>
+        </ul>
+      </nav>
+      <!-- Menu responsive -->
+      <div class="container-menu-responsive">
+        <div class="hamburger" onclick="toggleMenu()">
+          <img src="img/menu-hamburguesa.png" alt="User Icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
+        <nav class="responsive-menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="padrinaje.html">PADRINAJE</a></li>
+            <li><a href="dona.html">DONÁ</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
 
   <!-- Main content -->
   <main>
-    <section class="anotarse" id="anotarse">
-      <div class="form">
+    <section class="contact-section" id="anotarse">
+      <div class="form-container">
         <h2>Anotate para apadrinar</h2>
-        <form action="#">
-          <label for="name">Nombre completo<span class="required">*</span></label><br>
-          <input type="text" class="anotarse-form" id="name" placeholder="Escribe tu nombre" required><br>
-
-          <label for="email">Email<span class="required">*</span></label><br>
-          <input type="email" class="anotarse-form" id="email" placeholder="Escribe tu email" required><br>
-
-          <label for="phone">Teléfono de contacto</label><br>
-          <input type="number" class="anotarse-form" id="phone" placeholder="Teléfono"></textarea><br>
+        <form action="#" class="form-login">
+          <div>
+            <label for="name">Nombre completo<span class="required">*</span></label>
+            <span class="mensaje-error oculto" id="error-name">Campo obligatorio</span>
+          </div>
+          <input type="text" id="name" placeholder="Escribe tu nombre" required><br>
+          <div>
+            <label for="email">Email<span class="required">*</span></label><br>
+            <span class="mensaje-error oculto" id="error-email">Campo obligatorio</span>
+          </div>
+          <input type="email" id="email" placeholder="Escribe tu email" required><br>
+          <div>
+            <label for="phone">Teléfono de contacto</label><br>
+            <span class="mensaje-error oculto" id="error-phone">Campo obligatorio</span>
+          </div>
+          <input type="number" id="phone" placeholder="Teléfono"></textarea><br>
 
           <button type="submit" class="btn-form">Enviar</button>
         </form>
