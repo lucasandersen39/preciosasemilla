@@ -57,13 +57,21 @@ main {
     color: #4d4d4d;
 }
 
+.image-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .image-container img {
     max-width: 100%;
     border-radius: 10px;
 }
 
 .text-container {
-    margin: 5%;
+    margin: 0 5%;
     width: 90%;
 }
 
@@ -107,6 +115,11 @@ main {
     justify-content: center;
     gap: 5%;
     padding: 10%;
+    min-height: 100vh;
+}
+
+.contact-section {
+    align-items: flex-start;
 }
 
 .form {
@@ -119,7 +132,7 @@ main {
 
 .form-container,
 .info-container {
-    width: 300px;
+    width: 50%;
 }
 
 .anotarse-form {
